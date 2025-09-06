@@ -1,0 +1,398 @@
+WHAT WE HAVE NOW
+.
+├── @generated
+│   ├── clientGraphql.ts
+│   └── graphql.ts
+├── i18n.json
+├── next-env.d.ts
+├── next.config.js
+├── package.json
+├── postcss.config.js
+├── public
+│   ├── attachment-gray.json
+│   ├── createProject.json
+│   ├── ExpertSearch.json
+│   ├── favicons
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-384x384.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── browserconfig.xml
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   ├── mstile-150x150.png
+│   │   ├── safari-pinned-tab.svg
+│   │   └── site.webmanifest
+│   ├── images
+│   │   ├── blueLogo.svg
+│   │   ├── bot-icon.svg
+│   │   ├── default_pfp.jpg
+│   │   ├── DemoBlockBg.png
+│   │   ├── empty-project-folder.svg
+│   │   ├── fivesElement.svg
+│   │   ├── KGG_Logo_big.svg
+│   │   ├── KGG_SecondaryLogo_Blue.svg
+│   │   ├── loaderKGG.svg
+│   │   ├── LockedAvatar.png
+│   │   ├── LockedProfileAvatar.png
+│   │   ├── logo.png
+│   │   ├── MainLogo.svg
+│   │   ├── NoInvoices.png
+│   │   ├── organization-placeholder.png
+│   │   ├── profile-placeholder.svg
+│   │   ├── reports.png
+│   │   └── rsc.png
+│   ├── invalidUserError.json
+│   ├── lock.json
+│   ├── noResult.json
+│   └── Search.json
+├── README.md
+├── src
+│   ├──  sentry.server.config.ts
+│   ├── app
+│   │   ├── (auth)
+│   │   │   ├── (admin)
+│   │   │   │   ├── clients
+│   │   │   │   ├── consultations
+│   │   │   │   ├── expert-invitations
+│   │   │   │   ├── expert-requests
+│   │   │   │   ├── experts
+│   │   │   │   ├── invoices
+│   │   │   │   ├── layout.tsx
+│   │   │   │   ├── organizations
+│   │   │   │   ├── raise-invoice
+│   │   │   │   └── reports
+│   │   │   ├── home
+│   │   │   │   ├── layout.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── projects
+│   │   │       ├── [projectId]
+│   │   │       ├── layout.tsx
+│   │   │       ├── new
+│   │   │       └── page.tsx
+│   │   ├── (public)
+│   │   │   ├── forgot-password
+│   │   │   │   └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── login
+│   │   │   │   └── page.tsx
+│   │   │   └── welcome
+│   │   │       └── page.tsx
+│   │   ├── consultation
+│   │   │   └── [consultationId]
+│   │   │       └── page.tsx
+│   │   ├── global-error.tsx
+│   │   ├── layout.tsx
+│   │   └── not-found.tsx
+│   ├── components
+│   │   ├── ClientsList.tsx
+│   │   ├── commons
+│   │   │   ├── EmptyList
+│   │   │   │   └── EmptyList.tsx
+│   │   │   ├── FileSelector.tsx
+│   │   │   ├── NoExpertFound
+│   │   │   │   └── NoExpertFound.tsx
+│   │   │   ├── NoResult
+│   │   │   │   └── NoResult.tsx
+│   │   │   ├── RequestAdditionalInfo.tsx
+│   │   │   ├── SelectedFilters
+│   │   │   │   ├── SelectedFilters.tsx
+│   │   │   │   └── SelectedFiltersItem.tsx
+│   │   │   ├── SelectOrganization
+│   │   │   │   └── SelectOrganization.tsx
+│   │   │   ├── SurveyExpert.tsx
+│   │   │   └── TrialModeModal
+│   │   │       └── TrialModeModal.tsx
+│   │   ├── consultations
+│   │   │   ├── ConsultationItem
+│   │   │   │   ├── ConsultationItem.tsx
+│   │   │   │   ├── ConsultationItemLayout.tsx
+│   │   │   │   └── TooltipUserItem.tsx
+│   │   │   ├── ConsultationModalBlocks
+│   │   │   │   ├── BookingSummary
+│   │   │   │   ├── Calendar
+│   │   │   │   ├── ConsultationBlockWrapper.tsx
+│   │   │   │   ├── ConsultationDetails.tsx
+│   │   │   │   ├── ConsultationExpert.tsx
+│   │   │   │   ├── ConsultationGuests.tsx
+│   │   │   │   ├── ConsultationSelectMembers.tsx
+│   │   │   │   └── TimeSlot
+│   │   │   ├── ConsultationRequestContext.tsx
+│   │   │   ├── ConsultationStatusBadge.tsx
+│   │   │   ├── FilterConsultations.tsx
+│   │   │   ├── initialConsultationsFilters.ts
+│   │   │   ├── RequestModal
+│   │   │   │   ├── ConsultationRequestConfirmation.tsx
+│   │   │   │   └── RequestModalConsultation.tsx
+│   │   │   └── TodaysConsultations.tsx
+│   │   ├── CreateProjectComponents
+│   │   │   └── CreateNewProjectField.tsx
+│   │   ├── dashboard
+│   │   │   ├── consultations
+│   │   │   │   └── ConsultationEditingContainer.tsx
+│   │   │   ├── DesktopDemoInfo.tsx
+│   │   │   ├── experts
+│   │   │   │   ├── ExpertAdmin
+│   │   │   │   ├── ExpertInfoCard.tsx
+│   │   │   │   ├── ExpertProfileAdminComponents
+│   │   │   │   ├── ExpertProjectAboutEditing.tsx
+│   │   │   │   ├── ExpertProjectView.tsx
+│   │   │   │   ├── ExpertRequestsInfo.tsx
+│   │   │   │   ├── ExpertReview.tsx
+│   │   │   │   └── ExpertsContainer.tsx
+│   │   │   ├── profile
+│   │   │   │   └── ProfileEditForm.tsx
+│   │   │   ├── projectClientView
+│   │   │   │   ├── ProjectConsultationRequestConsultationDrawer.tsx
+│   │   │   │   ├── ProjectPageContent.tsx
+│   │   │   │   └── ProjectViewerContext.tsx
+│   │   │   ├── projects
+│   │   │   │   ├── Attachment
+│   │   │   │   ├── BuildSurveyComponent.tsx
+│   │   │   │   ├── CheckboxesFilter.tsx
+│   │   │   │   ├── Consultations.tsx
+│   │   │   │   ├── DashboardSurvey.tsx
+│   │   │   │   ├── EditSurveyComponent.tsx
+│   │   │   │   ├── EndlessScrollFilters.tsx
+│   │   │   │   ├── FilterCheckboxISO.tsx
+│   │   │   │   ├── FindExpert
+│   │   │   │   ├── LocationFilters.tsx
+│   │   │   │   ├── project-details
+│   │   │   │   ├── ProjectAdmins
+│   │   │   │   ├── ProjectAdminSettings.tsx
+│   │   │   │   ├── ProjectConfiguration
+│   │   │   │   ├── ProjectCreatedBy.tsx
+│   │   │   │   ├── ProjectDetails.tsx
+│   │   │   │   ├── ProjectEditing
+│   │   │   │   ├── ProjectEditingContainer.tsx
+│   │   │   │   ├── ProjectExperts
+│   │   │   │   ├── ProjectInfoHeader.tsx
+│   │   │   │   ├── ProjectMembers
+│   │   │   │   ├── ProjectProgress
+│   │   │   │   ├── ProjectRow.tsx
+│   │   │   │   ├── ProjectsContainer.tsx
+│   │   │   │   ├── ProjectsHeader
+│   │   │   │   ├── SurveyContainer.tsx
+│   │   │   │   ├── useFiltersControlContext.tsx
+│   │   │   │   └── useProjectsContainer.ts
+│   │   │   └── vettingQuestions
+│   │   │       ├── CheckboxMarkCorrect.tsx
+│   │   │       ├── components
+│   │   │       ├── contents
+│   │   │       ├── context
+│   │   │       ├── ExpertVettingQuestionAnswerTitle.tsx
+│   │   │       ├── ExpertVettingQuestionsAnswered.tsx
+│   │   │       ├── ExpertVettingQuestionsBlock.tsx
+│   │   │       ├── ExpertVettingQuestionsUnanswered.tsx
+│   │   │       ├── hooks
+│   │   │       ├── MultiTextBoxOptions.tsx
+│   │   │       ├── ProjectQuestionEditing.tsx
+│   │   │       ├── ProjectVettingQuestion.tsx
+│   │   │       ├── ProjectVettingQuestions.tsx
+│   │   │       ├── VettingQuestionAnswer.tsx
+│   │   │       ├── VettingQuestionControls.tsx
+│   │   │       ├── VettingQuestionLogicItem.tsx
+│   │   │       ├── VettingQuestionOptions.tsx
+│   │   │       ├── VettingQuestionsAnswers.tsx
+│   │   │       └── VettingQuestionsTypesSelector.tsx
+│   │   ├── expertInvitations
+│   │   │   ├── ExpertInvitation.tsx
+│   │   │   └── ExpertInvitationsContainer.tsx
+│   │   ├── expertRequests
+│   │   │   ├── ExpertRequestInfo.tsx
+│   │   │   ├── ExpertRequestsContainer.tsx
+│   │   │   └── ExpertRequestsFiltering.tsx
+│   │   ├── invoices
+│   │   │   ├── InvoicesFilters.tsx
+│   │   │   ├── receipt
+│   │   │   │   ├── BorrowTokensModal.tsx
+│   │   │   │   ├── ConsolidatingContent.tsx
+│   │   │   │   ├── DeleteInvoice.tsx
+│   │   │   │   ├── ManualPurchaseModal.tsx
+│   │   │   │   ├── Receipt.tsx
+│   │   │   │   └── ReceiptAdminButton.tsx
+│   │   │   ├── ReferralInvoice.tsx
+│   │   │   └── UpdateInvoiceForm.tsx
+│   │   ├── onboarding
+│   │   │   ├── WelcomePageContainerClient.tsx
+│   │   │   └── WelcomePageHeader.tsx
+│   │   ├── organization
+│   │   │   ├── AdminOrganizationBlock.tsx
+│   │   │   ├── MainInformation.tsx
+│   │   │   ├── MobileOrganizationContainer.tsx
+│   │   │   ├── OrganizationContainer.tsx
+│   │   │   ├── OrganizationDemoModeComponent.tsx
+│   │   │   ├── OrganizationHeaderInformationEdit.tsx
+│   │   │   ├── OrganizationPayment.tsx
+│   │   │   ├── OrganizationReviews.tsx
+│   │   │   ├── OrganizationsActiveEndlessDropdown.tsx
+│   │   │   ├── OrganizationTransaction
+│   │   │   │   ├── OrganizationTransactions.tsx
+│   │   │   │   ├── OrganizationTransactionsClipboard.tsx
+│   │   │   │   └── OrganizationTransactionsTable.tsx
+│   │   │   └── ProfileInfo.tsx
+│   │   ├── OrganizationComponents
+│   │   │   ├── OrganizationConsultations.tsx
+│   │   │   ├── OrganizationHeaderInformation.tsx
+│   │   │   ├── OrganizationInviteMembers.tsx
+│   │   │   ├── OrganizationLogo.tsx
+│   │   │   ├── OrganizationMembersList.tsx
+│   │   │   ├── OrganizationMembersListEmpty.tsx
+│   │   │   ├── OrganizationMobileMenu.tsx
+│   │   │   ├── OrganizationProjectItem.tsx
+│   │   │   ├── OrganizationProjects.tsx
+│   │   │   ├── OrganizationRemoveMemberButton.tsx
+│   │   │   ├── useOrganizationInviteMembers.ts
+│   │   │   └── useOrganizationMembersList.ts
+│   │   ├── organizations
+│   │   │   ├── CreateOrganizationModal.tsx
+│   │   │   ├── EditOrganizationById.tsx
+│   │   │   ├── EditOrganizationModal.tsx
+│   │   │   ├── initialOrganizationsFilters.ts
+│   │   │   ├── OrganizationFilterPanel.tsx
+│   │   │   ├── OrganizationFormComponents
+│   │   │   │   └── OrganizationForm.tsx
+│   │   │   ├── OrganizationItem.tsx
+│   │   │   ├── OrganizationsContainer.tsx
+│   │   │   └── useOrganizationsContainer.ts
+│   │   ├── pagesComponents
+│   │   │   └── Expert
+│   │   │       └── ExpertProfile.tsx
+│   │   ├── ProjectPage
+│   │   │   ├── AISuggestedExpertsTab
+│   │   │   │   └── AISuggestedExpertsTab.tsx
+│   │   │   ├── CreateUpdateProject
+│   │   │   │   ├── CreatingProject.tsx
+│   │   │   │   ├── CreatingProjectContainer.tsx
+│   │   │   │   ├── GoalsManager.tsx
+│   │   │   │   ├── initialProjectValues.ts
+│   │   │   │   ├── ProjectMainInfoForm.tsx
+│   │   │   │   └── useProjectMainInfoForm.ts
+│   │   │   └── ExpertsTab
+│   │   │       ├── ExpertController
+│   │   │       ├── ExpertItem.tsx
+│   │   │       ├── ExpertsFilters.tsx
+│   │   │       ├── ExpertsList.tsx
+│   │   │       ├── ExpertsTab.tsx
+│   │   │       ├── initialExpertTabFilterParams.ts
+│   │   │       ├── RejectionNoteModal.tsx
+│   │   │       ├── StateTag.tsx
+│   │   │       └── useProjectExpertsController.tsx
+│   │   ├── skeletons
+│   │   │   ├── NewestProjectsSkeletonElement.tsx
+│   │   │   └── OrganizationSkeleton.tsx
+│   │   ├── survey
+│   │   │   ├── DashboardContainer.tsx
+│   │   │   └── TableContainer.tsx
+│   │   └── useDebouncedExpertSearch.tsx
+│   ├── defaultData
+│   │   └── defaultOrder.ts
+│   ├── hooks
+│   │   ├── useConsultationController.ts
+│   │   ├── useDeleteExpertFromProject.ts
+│   │   ├── useInvoiceFilters.ts
+│   │   ├── useInvoicesPage.ts
+│   │   ├── useNotes.tsx
+│   │   └── useShowUpdateCreateExpertByJsonResult.tsx
+│   ├── instrumentation-client.ts
+│   ├── lib
+│   │   └── contexts
+│   │       ├── AuthGuard.tsx
+│   │       ├── Dashboar.tsx
+│   │       ├── TrialModeContext.tsx
+│   │       └── ViewerContext.tsx
+│   ├── sentry.edge.config.ts
+│   ├── styles
+│   │   └── styles.css
+│   ├── types
+│   │   ├── expertRequestsFilters.ts
+│   │   ├── invitationFilters.ts
+│   │   ├── profileOrganization.ts
+│   │   ├── projectExpertsSorting.ts
+│   │   └── viewerOrganization.ts
+│   └── utils
+│       ├── config.ts
+│       ├── filterObjects.ts
+│       ├── iso.ts
+│       ├── readableUsState.ts
+│       ├── specificInvitation.ts
+│       └── validatePasswordFormik.ts
+├── structure.txt
+├── tsconfig.json
+├── tsconfig.tsbuildinfo
+└── turbo.json
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RE-WORK PLAN:
+	•	boundaries can be added inside apps (optional): utils → hooks → ui → feature → adapters → apps
+    zones: [
+          zone("foundation", ["hooks","ui","feature","adapters"]),
+          zone("hooks", ["ui","feature","adapters"]),
+          zone("ui", ["feature","adapters"]),
+          zone("feature", ["adapters"]) // features can't import adapters
+        ]
+
+	•	Structure in mind:
+packages/iris-client/
+└── src
+   ├── app/                         # Next routes only (no business logic)
+   │  ├── (auth)/...
+   │  ├── (public)/...
+   │  ├── consultation/[consultationId]/page.tsx
+   │  ├── layout.tsx
+   │  └── global-error.tsx
+   │
+   ├── shared/                      # generic, app-agnostic
+   │  ├── api/                      # fetchers/adapters used in client app
+   │  ├── hooks/                    # useDebouncedValue wrappers, tiny helpers
+   │  ├── lib/                      # non-react helpers (formatters, mappers)
+   │  ├── ui/                       # small presentational pieces local to app
+   │  ├── config/                   # app config, constants
+   │  └── styles/                   # styles.css, tailwind plugins if any
+   │
+   ├── entities/                    # domain “nouns”, smallest cohesive units
+   │  ├── user/
+   │  ├── organization/
+   │  ├── project/
+   │  ├── consultation/
+   │  ├── invoice/
+   │  └── notifications/
+   │     ├── model/                 # types, minimal state helpers
+   │     ├── lib/                   # entity-specific helpers/mappers
+   │     └── ui/                    # tiny entity views (Badges, Rows)
+   │
+   ├── features/                    # domain actions/use-cases (verbs)
+   │  ├── project-create/
+   │  │  ├── model/                 # local state/use cases (hooks)
+   │  │  ├── lib/
+   │  │  └── ui/                    # composed UI using @kgg/iris-components
+   │  ├── consultation-booking/
+   │  ├── consultation-filters/
+   │  ├── expert-search/
+   │  ├── organization-manage/
+   │  ├── vetting-questions/
+   │  └── invoices-manage/
+   │
+   ├── widgets/                     # page-level blocks (compose features+entities)
+   │  ├── projects-table/
+   │  ├── project-header/
+   │  ├── organization-overview/
+   │  ├── consultations-list/
+   │  └── invoices-receipt-panel/
+   │
+   ├── lib/
+   │  └── contexts/                 # AuthGuard, ViewerContext, TrialModeContext stay here
+   │
+   ├── hooks/                       # app-specific leftover hooks (will move to features)
+   ├── types/                       # app-specific types only (not shared)
+   └── utils/                       # (to be emptied; move to shared/lib)
+
+It should go smth like: shared (generic) → entities (small domain bricks) → features (actions/use-cases) → widgets (page blocks) → app routes (composition only).
+So the moving will go like:
+components/consultations/*
+(inside of it) ConsultationItem, ConsultationStatusBadge, FilterConsultations, TodaysConsultations, ConsultationModalBlocks/*, ConsultationRequestContext
+	•	→ features/consultation-booking/ui/* (modal blocks, status badge)
+	•	→ features/consultation-booking/model/* (context/hooks)
+	••  Table/list renderers that are page blocks → widgets/consultations-list/*
