@@ -1,0 +1,401 @@
+WHAT WE HAVE NOW
+.
+├── @generated
+│   ├── graphql.ts
+│   └── sharedGraphql.ts
+├── package.json
+├── src
+│   ├── API
+│   │   ├── getFetchCollaborations.ts
+│   │   └── uploaderAxios.ts
+│   ├── chime-meeting-sdk
+│   │   ├── CameraPlaceholder.tsx
+│   │   ├── Chime.tsx
+│   │   ├── ChimeContext.tsx
+│   │   ├── ChimeControls.tsx
+│   │   ├── ChimeView.tsx
+│   │   ├── RemoteVideoItem.tsx
+│   │   └── useChime.tsx
+│   ├── commons
+│   │   ├── AccountManager
+│   │   │   └── AccountManager.tsx
+│   │   ├── Badge
+│   │   │   └── Badge.tsx
+│   │   ├── Buttons
+│   │   │   ├── Button.tsx
+│   │   │   ├── DeleteElementButton.tsx
+│   │   │   ├── EditElementButton.tsx
+│   │   │   ├── IconButton.tsx
+│   │   │   └── LinkButton.tsx
+│   │   ├── Calendar
+│   │   │   ├── convertDateToTz.ts
+│   │   │   ├── CustomTimePicker.tsx
+│   │   │   ├── ReusableTimeEditing.tsx
+│   │   │   ├── ShowTimeElement.tsx
+│   │   │   ├── TimeAvailability.tsx
+│   │   │   ├── TimeAvailabilityList.tsx
+│   │   │   ├── TimeSelector.tsx
+│   │   │   ├── useCustomTimePicker.ts
+│   │   │   ├── useDatesWithAvailability.ts
+│   │   │   ├── useDayEditing.ts
+│   │   │   ├── useRenderDayContents.tsx
+│   │   │   └── useTimeAvailability.ts
+│   │   ├── Card
+│   │   │   └── Card.tsx
+│   │   ├── ClientNotifications
+│   │   │   ├── ClientNotifications.tsx
+│   │   │   ├── ClientNotificationsContainer.tsx
+│   │   │   ├── ClientNotificationWrapper.tsx
+│   │   │   ├── NotificationItems
+│   │   │   │   ├── ConsultationNotificationItem.tsx
+│   │   │   │   ├── InvoiceNotificationItem.tsx
+│   │   │   │   ├── OrganizationMemberNotificationItem.tsx
+│   │   │   │   ├── OrganizationNotificationItem.tsx
+│   │   │   │   ├── ProjectExpertNotificationItem.tsx
+│   │   │   │   ├── ProjectMemberNotificationItem.tsx
+│   │   │   │   ├── ProjectNotificationItem.tsx
+│   │   │   │   └── ReviewNotificationItem.tsx
+│   │   │   └── NotificationsPreferences
+│   │   │       ├── NotificationsPreferences.tsx
+│   │   │       ├── NotificationsPreferencesContainer.tsx
+│   │   │       ├── NotificationsPreferencesItem.tsx
+│   │   │       └── NotificationsTypes.ts
+│   │   ├── Clipboard
+│   │   │   ├── ClipboardIconButton.tsx
+│   │   │   └── ClipboardText.tsx
+│   │   ├── ConfigureAmplifyClientSide.tsx
+│   │   ├── ContentWrapper
+│   │   │   ├── ContentWrapper.tsx
+│   │   │   └── monorepo.code-workspace
+│   │   ├── CustomDatePicker
+│   │   │   └── CustomDatePicker.tsx
+│   │   ├── DateRange
+│   │   │   └── DateRange.tsx
+│   │   ├── DefaultIcon
+│   │   │   └── DefaultIcon.tsx
+│   │   ├── DeletingModal
+│   │   │   ├── DeleteConfirmationModal.tsx
+│   │   │   └── DeletingModal.tsx
+│   │   ├── Dropdown
+│   │   │   ├── Dropdown.tsx
+│   │   │   └── useDropdown.ts
+│   │   ├── EndlessScrollWrapper
+│   │   │   └── EndlessScrollWrapper.tsx
+│   │   ├── ErrorComponents
+│   │   │   ├── ErrorPresenter.tsx
+│   │   │   └── GenericErrorPresenter.tsx
+│   │   ├── Field
+│   │   │   └── Field.tsx
+│   │   ├── FormikComponents
+│   │   │   ├── FormikCheckbox.tsx
+│   │   │   ├── FormikDatePicker.tsx
+│   │   │   ├── FormikEditor.tsx
+│   │   │   ├── FormikError.tsx
+│   │   │   ├── FormikInput.tsx
+│   │   │   ├── FormikPassword
+│   │   │   │   ├── FormikCreatePasswordWithConfirm.tsx
+│   │   │   │   ├── FormikPasswordInput.tsx
+│   │   │   │   ├── PasswordPopover.tsx
+│   │   │   │   ├── PasswordRequirement.tsx
+│   │   │   │   └── passwordRequirements.ts
+│   │   │   ├── FormikSelect.tsx
+│   │   │   └── FormikSwitcher.tsx
+│   │   ├── HtmlRenderer
+│   │   │   └── HtmlRenderer.tsx
+│   │   ├── Hubspot
+│   │   │   ├── HubspotChat.tsx
+│   │   │   ├── HubspotChatContext.tsx
+│   │   │   └── useHubspotChat.ts
+│   │   ├── InfoLine
+│   │   │   └── InfoLine.tsx
+│   │   ├── InputElements
+│   │   │   ├── Checkbox.tsx
+│   │   │   ├── CheckboxListItem.tsx
+│   │   │   ├── DropdownSearchInput.tsx
+│   │   │   ├── EditorInput.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── Switcher.tsx
+│   │   │   └── Textarea.tsx
+│   │   ├── InvitationError
+│   │   │   └── InvitationError.tsx
+│   │   ├── InvitationsTable
+│   │   │   └── EditableInvitationsTable.tsx
+│   │   ├── InvoiceElements
+│   │   │   ├── InvoiceCreatingUpdating
+│   │   │   │   ├── InvoiceItems.tsx
+│   │   │   │   ├── InvoicesForm.tsx
+│   │   │   │   ├── InvoicesFormFields.tsx
+│   │   │   │   ├── InvoicesFormPersonalInformation.tsx
+│   │   │   │   └── useInitialInvoiceState.ts
+│   │   │   ├── InvoicesList
+│   │   │   │   ├── InvoiceCard
+│   │   │   │   ├── InvoicesContainer.tsx
+│   │   │   │   └── InvoicesList.tsx
+│   │   │   └── InvoiceWrapper.tsx
+│   │   ├── Loaders
+│   │   │   ├── Loader.tsx
+│   │   │   ├── LogoLoader.tsx
+│   │   │   └── SvgCircleLoader.tsx
+│   │   ├── MantineTabs
+│   │   │   └── MantineTabs.tsx
+│   │   ├── MemberTable
+│   │   │   ├── MemberRoleSelect.tsx
+│   │   │   ├── MemberTable.tsx
+│   │   │   └── MobileMemberTable.tsx
+│   │   ├── ModalWithLogo
+│   │   │   └── ModalWithLogo.tsx
+│   │   ├── ModalWrapper
+│   │   │   └── ModalWrapper.tsx
+│   │   ├── Navigation
+│   │   │   ├── AdminClientNavigationList.tsx
+│   │   │   ├── Navigation.tsx
+│   │   │   ├── NavigationButton.tsx
+│   │   │   ├── NavigationItem.tsx
+│   │   │   ├── NavigationLayout.tsx
+│   │   │   ├── PinButton.tsx
+│   │   │   └── ProfileNavigationButton.tsx
+│   │   ├── NotificationsComponents
+│   │   │   ├── NotificationContainer.tsx
+│   │   │   ├── NotificationIcon.tsx
+│   │   │   ├── NotificationLink.tsx
+│   │   │   ├── NotificationTimespan.tsx
+│   │   │   └── NotificationTitle.tsx
+│   │   ├── Paginated
+│   │   │   └── Paginated.tsx
+│   │   ├── Pagination
+│   │   │   ├── OffsetPagination.tsx
+│   │   │   ├── PaginationFooter.tsx
+│   │   │   └── usePagination.ts
+│   │   ├── PanelTemplate.tsx
+│   │   ├── ProfilePhoto
+│   │   │   └── ProfilePhoto.tsx
+│   │   ├── RatingElement
+│   │   │   └── RatingElement.tsx
+│   │   ├── Receipt
+│   │   │   ├── NewInvoiceMessage.tsx
+│   │   │   ├── ReceiptPaper.tsx
+│   │   │   └── ReceiptPaperComponents
+│   │   │       ├── ReceiptPaperCompanyInfo.tsx
+│   │   │       ├── ReceiptPaperExpertInfo.tsx
+│   │   │       └── ReceiptPaperPayInfo.tsx
+│   │   ├── ReviewForm
+│   │   │   ├── ReviewForm.tsx
+│   │   │   ├── Reviews.tsx
+│   │   │   ├── ReviewsTable.tsx
+│   │   │   └── ReviewsTableRow.tsx
+│   │   ├── SearchBar
+│   │   │   └── SearchBar.tsx
+│   │   ├── Select
+│   │   │   ├── InfiniteScrollSelect.tsx
+│   │   │   ├── Select.tsx
+│   │   │   ├── SelectValues.ts
+│   │   │   └── useInfiniteScrollDropdown.ts
+│   │   ├── SelectElement.tsx
+│   │   ├── ShowMoreComponent
+│   │   │   └── ShowMoreComponent.tsx
+│   │   ├── SlideOverWrapper
+│   │   │   └── SlideOverWrapper.tsx
+│   │   ├── StatusLabel
+│   │   │   └── StatusLabel.tsx
+│   │   ├── StringsForm
+│   │   │   └── StringsForm.tsx
+│   │   ├── SVG
+│   │   │   ├── ArrowLogo.tsx
+│   │   │   ├── KgLongLogo.tsx
+│   │   │   ├── KLogo.tsx
+│   │   │   └── TremendousSVG.tsx
+│   │   ├── Table
+│   │   │   └── Table.tsx
+│   │   ├── TermsAndConditions
+│   │   │   └── TermsAndConditions.tsx
+│   │   ├── TextBlock
+│   │   │   └── TextBlock.tsx
+│   │   ├── ThreeDotsMenu
+│   │   │   └── ThreeDotsMenu.tsx
+│   │   ├── Title
+│   │   │   └── Title.tsx
+│   │   ├── TooltipWrapper
+│   │   │   └── TooltipWrapper.tsx
+│   │   └── VettingQuestions
+│   │       ├── MultiTextboxSelect
+│   │       │   └── MultitextboxInput.tsx
+│   │       ├── SelectableOptions
+│   │       │   └── SelectableOption.tsx
+│   │       ├── useVettingQuestionsField.ts
+│   │       ├── VettingQuestionComponents.tsx
+│   │       ├── VettingQuestionsField.tsx
+│   │       └── vettingQuestionUtils.ts
+│   ├── context
+│   │   ├── ApolloWrapper.tsx
+│   │   ├── AuthProvider.tsx
+│   │   ├── createErrorLink.tsx
+│   │   ├── PaginatedContext.tsx
+│   │   ├── ProviderUI.tsx
+│   │   └── useApolloClient.ts
+│   ├── hooks
+│   │   ├── useAnimationDataLazily.ts
+│   │   ├── useClipboard.ts
+│   │   ├── useDebounceSearch.ts
+│   │   ├── useDeviceView.ts
+│   │   ├── useEditExpert.tsx
+│   │   ├── useExpertPricing.tsx
+│   │   ├── useHandleRecord.ts
+│   │   ├── useImageUploader.ts
+│   │   ├── useMutationHandler.ts
+│   │   ├── useOffsetPagination.ts
+│   │   ├── useOrganizationPayment.tsx
+│   │   ├── usePaginatedTable.ts
+│   │   ├── usePagination.ts
+│   │   ├── useRequiredChanges.ts
+│   │   ├── useReviewForConsultation.ts
+│   │   ├── useReviewForExpert.ts
+│   │   ├── useToggleState.ts
+│   │   ├── useUpdateSearch.ts
+│   │   ├── useUploadFile.ts
+│   │   └── useValidation.tsx
+│   ├── lazyLoading
+│   │   ├── DynamicImportLottie.ts
+│   │   └── DynamicModalWrapper.tsx
+│   ├── pages
+│   │   ├── Expert
+│   │   │   ├── ExpertBlocks
+│   │   │   │   ├── About
+│   │   │   │   ├── Awards
+│   │   │   │   ├── Certifications
+│   │   │   │   ├── ClinicalTrials
+│   │   │   │   ├── Collaborations
+│   │   │   │   ├── ConferenceActivity
+│   │   │   │   ├── Educations
+│   │   │   │   ├── Experiences
+│   │   │   │   ├── MainInformation
+│   │   │   │   ├── Patents
+│   │   │   │   ├── Profile
+│   │   │   │   ├── Publications
+│   │   │   │   └── Skills
+│   │   │   └── ExpertComponents
+│   │   │       ├── AdditionalInfoText.tsx
+│   │   │       ├── AuthorsModal.tsx
+│   │   │       ├── BlockWrapper.tsx
+│   │   │       ├── EditingFormWrapper.tsx
+│   │   │       ├── EditingProfileSection.tsx
+│   │   │       ├── ExpertEditBlockFooter.tsx
+│   │   │       ├── ExpertEditBlockHeader.tsx
+│   │   │       ├── ExpertEditDateRange.tsx
+│   │   │       ├── ProfileSection.tsx
+│   │   │       └── SocialItem.tsx
+│   │   ├── ForgotPassword
+│   │   │   ├── ForgotPassword.tsx
+│   │   │   ├── ForgotPasswordStatus.tsx
+│   │   │   ├── ForgotPasswordSubmit.tsx
+│   │   │   └── submitSuccess.json
+│   │   ├── Login
+│   │   │   └── Login.tsx
+│   │   ├── NotFound
+│   │   │   ├── 404.json
+│   │   │   └── NotFound.tsx
+│   │   └── Schedule
+│   │       └── CalendarDayContent.tsx
+│   ├── styles.css
+│   ├── types
+│   │   ├── editableField.ts
+│   │   ├── empty.ts
+│   │   ├── menuElementType.ts
+│   │   ├── NullableDate.ts
+│   │   ├── omitId.ts
+│   │   ├── png
+│   │   │   └── indext.d.ts
+│   │   ├── refetch.ts
+│   │   └── viewerOrganization.ts
+│   └── utils
+│       ├── amplify-server-methods.ts
+│       ├── amplify-server-util.ts
+│       ├── analytics
+│       │   ├── AmplitudeInit.tsx
+│       │   ├── constants.ts
+│       │   └── trackEvent.ts
+│       ├── availabilityUtils.ts
+│       ├── buttonStyles.tsx
+│       ├── ClassNames.tsx
+│       ├── config.ts
+│       ├── countriesList.ts
+│       ├── createUpdateQuery.ts
+│       ├── dlog.ts
+│       ├── downloadPdf.ts
+│       ├── followers.ts
+│       ├── formatDate.ts
+│       ├── formatMinutesDuration.ts
+│       ├── getButtonStateBasedOnTime.ts
+│       ├── getFormattedLocation.ts
+│       ├── getInvoiceTitle.tsx
+│       ├── invoicesSorting.ts
+│       ├── isAnonymizedField.tsx
+│       ├── isFormikStatus.ts
+│       ├── isMeetingOver.ts
+│       ├── locationInfoToReadableFormat.ts
+│       ├── LoginStatus.tsx
+│       ├── notifyNever.ts
+│       ├── prepareAuthors.ts
+│       ├── readableLocationFromISOCode.ts
+│       ├── readableUsState.ts
+│       ├── regexValidateEmail.ts
+│       ├── removeEmptyStringsFromDataObject.ts
+│       ├── removeKeys.ts
+│       ├── renderComponent.tsx
+│       ├── sentryHelpers.ts
+│       ├── showCustomNotification.ts
+│       ├── splitCamelCase.ts
+│       ├── statusFromUnknown.ts
+│       ├── timespans.ts
+│       ├── uploadPdf.ts
+│       └── validateEmailFormik.ts
+├── structure.txt
+├── tsconfig.json
+├── tsconfig.tsbuildinfo
+└── turbo.json
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RE-WORK PLAN:
+src/
+  foundation/               // zero React. constants, types, tokens refs
+    date/
+    formatting/
+    types/
+  hooks/                    // generic React hooks (no app business)
+    useToggleState.ts
+    useDebounceSearch.ts
+    usePagination.ts
+  ui/                       // presentational components only
+    Button/
+    Card/
+    Table/
+    Loader/
+    Icons/
+    forms/                  // Input, Switcher, Textarea, etc.
+  feature/                  // domain modules (keep them here, not in CLIENT/EXPERT apps)
+    calendar/
+      components/
+      hooks/
+      utils/
+    notifications/
+      components/
+      hooks/
+    invoices/
+      components/
+      hooks/
+    vetting/
+      components/
+      hooks/
+    rtc-chime/
+      components/
+      hooks/
+  adapters/                 // thin integration to app contexts (optional)?
+    apollo/
+    sentry-amplitude/
+
+So the moving will go like:
+	•	commons/Buttons/* → ui/Button/*
+	•	commons/Table/* → ui/Table/*
+	•	commons/Calendar/* → feature/calendar/*
+	•	chime-meeting-sdk/* → feature/rtc-chime/*
+	•	pure helpers from utils/* → foundation/* (if not React) or hooks/* (if React)
