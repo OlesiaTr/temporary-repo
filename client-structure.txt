@@ -347,12 +347,14 @@ packages/iris-client/
    ├── shared/                      # generic, app-agnostic
    │  ├── api/                      # fetchers/adapters used in client app
    │  ├── hooks/                    # useDebouncedValue wrappers, tiny helpers
-   │  ├── lib/                      # non-react helpers (formatters, mappers)
-   │  ├── ui/                       # small presentational pieces local to app
+   │  ├── utils/                    # non-react helpers (formatters, mappers)
+   │  ├── ui/                       # small presentational pieces local to app (part of views lvl)
+   │  ├── types/                    
    │  ├── config/                   # app config, constants
+   │  ├── contexts/                 # AuthGuard, ViewerContext, TrialModeContext stay here
    │  └── styles/                   # styles.css, tailwind plugins if any
    │
-   ├── entities/                    # domain “nouns”, smallest cohesive units
+   ├── entities/                    # domain “nouns”, smallest cohesive units (part of business logic lvl)
    │  ├── user/
    │  ├── organization/
    │  ├── project/
@@ -363,7 +365,7 @@ packages/iris-client/
    │     ├── lib/                   # entity-specific helpers/mappers
    │     └── ui/                    # tiny entity views (Badges, Rows)
    │
-   ├── features/                    # domain actions/use-cases (verbs)
+   ├── features/                    # domain actions/use-cases (verbs) (part of business logic lvl)
    │  ├── project-create/
    │  │  ├── model/                 # local state/use cases (hooks)
    │  │  ├── lib/
@@ -375,21 +377,15 @@ packages/iris-client/
    │  ├── vetting-questions/
    │  └── invoices-manage/
    │
-   ├── widgets/                     # page-level blocks (compose features+entities)
+   └──  widgets/                     # page-level blocks (compose features+entities) (part of views lvl)
    │  ├── projects-table/
    │  ├── project-header/
    │  ├── organization-overview/
    │  ├── consultations-list/
    │  └── invoices-receipt-panel/
-   │
-   ├── lib/
-   │  └── contexts/                 # AuthGuard, ViewerContext, TrialModeContext stay here
-   │
-   ├── hooks/                       # app-specific leftover hooks (will move to features)
-   ├── types/                       # app-specific types only (not shared)
-   └── utils/                       # (to be emptied; move to shared/lib)
 
 It should go smth like: shared (generic) → entities (small domain bricks) → features (actions/use-cases) → widgets (page blocks) → app routes (composition only).
+Or we can separate into shared lvl --- business logic lvl --- views lvl
 So the moving will go like:
 components/consultations/*
 (inside of it) ConsultationItem, ConsultationStatusBadge, FilterConsultations, TodaysConsultations, ConsultationModalBlocks/*, ConsultationRequestContext
